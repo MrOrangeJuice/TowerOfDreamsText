@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TowerOfDreamsText")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+84cdb4e5449defaf7f3df6ba75d5513ca7a2de9e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3c2e24602dc6af51297433f609a53b6962333d89")]
 [assembly: System.Reflection.AssemblyProductAttribute("TowerOfDreamsText")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TowerOfDreamsText")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

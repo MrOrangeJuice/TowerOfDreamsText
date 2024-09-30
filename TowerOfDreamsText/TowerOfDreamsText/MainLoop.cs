@@ -5,7 +5,9 @@ int health = 6;
 int attack = 2;
 int gems = 0;
 Enemy currentEnemy = new Enemy();
+int enemiesKilled = 0;
 int dropChance;
+int jumpFailChance;
 
 while(input != "q")
 {
@@ -24,7 +26,8 @@ while(input != "q")
             if (currentEnemy.Die())
             {
                 enemyDrop();
-                currentEnemy = new Enemy();
+                enemiesKilled++;
+                currentEnemy = new Enemy(enemiesKilled);
             }
             else
             {
@@ -34,7 +37,14 @@ while(input != "q")
             break;
         case "j":
             Console.WriteLine("You jump over the enemy!");
-            currentEnemy = new Enemy();
+            Random jumpRand = new Random();
+            jumpFailChance = jumpRand.Next(1, 10);
+            if(jumpFailChance < 6)
+            {
+                health -= currentEnemy.Attack();
+                Console.WriteLine("You're now at " + health + " health");
+            }
+            currentEnemy = new Enemy(enemiesKilled);
             break;
         case "s":
             Console.WriteLine("You're at " + health + " health");
@@ -60,5 +70,4 @@ void enemyDrop()
         Console.WriteLine("You're now at " + health + " health!");
         Console.WriteLine();
     }
-
 }

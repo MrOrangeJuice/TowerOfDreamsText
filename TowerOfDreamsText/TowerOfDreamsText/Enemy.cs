@@ -25,11 +25,11 @@ namespace TowerOfDreamsText
         private int eliteRand;
         private int nameRand;
         private string name;
-        public Enemy() 
+        public Enemy(int enemiesKilled = 0) 
         {
             Random rand = new Random();
-            health = rand.Next(2, 4);
-            damage = rand.Next(1, 2);
+            health = rand.Next(2, 4+enemiesKilled);
+            damage = rand.Next(1, 2+enemiesKilled);
             nameRand = rand.Next(1, 3);
             switch(nameRand)
             {
