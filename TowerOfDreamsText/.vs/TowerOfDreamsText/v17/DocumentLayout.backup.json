@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\aparrotto\\OneDrive - FreedomPay, Inc\\Documents\\GitHub\\TowerOfDreamsText\\TowerOfDreamsText\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DA1787A3-96E1-48B0-A393-D05051DEE8C5}|TowerOfDreamsText\\TowerOfDreamsText.csproj|c:\\users\\aparrotto\\onedrive - freedompay, inc\\documents\\github\\towerofdreamstext\\towerofdreamstext\\towerofdreamstext\\mainloop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA1787A3-96E1-48B0-A393-D05051DEE8C5}|TowerOfDreamsText\\TowerOfDreamsText.csproj|solutionrelative:towerofdreamstext\\mainloop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DA1787A3-96E1-48B0-A393-D05051DEE8C5}|TowerOfDreamsText\\TowerOfDreamsText.csproj|c:\\users\\aparrotto\\onedrive - freedompay, inc\\documents\\github\\towerofdreamstext\\towerofdreamstext\\towerofdreamstext\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DA1787A3-96E1-48B0-A393-D05051DEE8C5}|TowerOfDreamsText\\TowerOfDreamsText.csproj|solutionrelative:towerofdreamstext\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA1787A3-96E1-48B0-A393-D05051DEE8C5}|TowerOfDreamsText\\TowerOfDreamsText.csproj|c:\\users\\aparrotto\\onedrive - freedompay, inc\\documents\\github\\towerofdreamstext\\towerofdreamstext\\towerofdreamstext\\mainloop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA1787A3-96E1-48B0-A393-D05051DEE8C5}|TowerOfDreamsText\\TowerOfDreamsText.csproj|solutionrelative:towerofdreamstext\\mainloop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 233,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,26 +38,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Enemy.cs",
               "DocumentMoniker": "C:\\Users\\aparrotto\\OneDrive - FreedomPay, Inc\\Documents\\GitHub\\TowerOfDreamsText\\TowerOfDreamsText\\TowerOfDreamsText\\Enemy.cs",
               "RelativeDocumentMoniker": "TowerOfDreamsText\\Enemy.cs",
               "ToolTip": "C:\\Users\\aparrotto\\OneDrive - FreedomPay, Inc\\Documents\\GitHub\\TowerOfDreamsText\\TowerOfDreamsText\\TowerOfDreamsText\\Enemy.cs",
               "RelativeToolTip": "TowerOfDreamsText\\Enemy.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAowFAAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAowEEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-30T15:11:59.933Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "MainLoop.cs",
               "DocumentMoniker": "C:\\Users\\aparrotto\\OneDrive - FreedomPay, Inc\\Documents\\GitHub\\TowerOfDreamsText\\TowerOfDreamsText\\TowerOfDreamsText\\MainLoop.cs",
               "RelativeDocumentMoniker": "TowerOfDreamsText\\MainLoop.cs",
               "ToolTip": "C:\\Users\\aparrotto\\OneDrive - FreedomPay, Inc\\Documents\\GitHub\\TowerOfDreamsText\\TowerOfDreamsText\\TowerOfDreamsText\\MainLoop.cs",
               "RelativeToolTip": "TowerOfDreamsText\\MainLoop.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-30T14:55:55.903Z",
               "EditorCaption": ""

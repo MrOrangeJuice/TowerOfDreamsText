@@ -12,3 +12,4 @@ C:\Users\aparrotto\OneDrive - FreedomPay, Inc\Documents\GitHub\TowerOfDreamsText
 C:\Users\aparrotto\OneDrive - FreedomPay, Inc\Documents\GitHub\TowerOfDreamsText\TowerOfDreamsText\TowerOfDreamsText\obj\Debug\net8.0\TowerOfDreamsText.pdb
 C:\Users\aparrotto\OneDrive - FreedomPay, Inc\Documents\GitHub\TowerOfDreamsText\TowerOfDreamsText\TowerOfDreamsText\obj\Debug\net8.0\TowerOfDreamsText.genruntimeconfig.cache
 C:\Users\aparrotto\OneDrive - FreedomPay, Inc\Documents\GitHub\TowerOfDreamsText\TowerOfDreamsText\TowerOfDreamsText\obj\Debug\net8.0\ref\TowerOfDreamsText.dll
+C:\Users\aparrotto\OneDrive - FreedomPay, Inc\Documents\GitHub\TowerOfDreamsText\TowerOfDreamsText\TowerOfDreamsText\obj\Debug\net8.0\TowerOfDreamsText.sourcelink.json

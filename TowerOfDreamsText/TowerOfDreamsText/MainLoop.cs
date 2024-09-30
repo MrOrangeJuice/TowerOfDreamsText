@@ -20,7 +20,14 @@ while(input != "q")
         case "a":
             Console.WriteLine("You attack!");
             currentEnemy.TakeDamage(attack);
-            if (currentEnemy.Die()) currentEnemy = new Enemy();
+            if (currentEnemy.Die())
+            {
+                currentEnemy = new Enemy();
+            }
+            else
+            {
+                health -= currentEnemy.Attack();
+            }
             break;
         case "b":
             Console.WriteLine("You block!");
@@ -30,4 +37,9 @@ while(input != "q")
             break;
     }
     Console.WriteLine();
+}
+
+public void enemyDrop()
+{
+    Random rand = new Random();
 }

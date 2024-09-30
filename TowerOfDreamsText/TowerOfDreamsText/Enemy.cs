@@ -66,8 +66,9 @@ namespace TowerOfDreamsText
 
         public void TakeDamage(int playerDamage)
         {
-            Console.WriteLine(name + " takes " + damage + " damage!");
+            Console.WriteLine(name + " takes " + playerDamage + " damage!");
             health -= playerDamage;
+            if (health < 0) health = 0;
             Console.WriteLine(name + " has " + health + " health remaining!");
         }
 
