@@ -41,17 +41,38 @@ namespace TowerOfDreamsText
             Random rand = new Random();
             health = rand.Next(2, 4+enemiesKilled);
             damage = rand.Next(1, 2+enemiesKilled);
-            nameRand = rand.Next(1, 3);
+            nameRand = rand.Next(1, 11);
             switch(nameRand)
             {
                 case 1:
-                    name = "Slime";
+                    name = "Slimo";
                     break;
                 case 2:
-                    name = "Pop Cannon";
+                    name = "Cannon Gizmo";
                     break;
                 case 3:
-                    name = "Gravitro";
+                    name = "Gravitra";
+                    break;
+                case 4:
+                    name = "Barrollo";
+                    break;
+                case 5:
+                    name = "Tank Gizmo";
+                    break;
+                case 6:
+                    name = "Wrenchonimo";
+                    break;
+                case 7:
+                    name = "Sawblade";
+                    break;
+                case 8:
+                    name = "Beezle";
+                    break;
+                case 9:
+                    name = "Spice Plant";
+                    break;
+                case 10:
+                    name = "Cumulonimbo";
                     break;
             }
             eliteRand = rand.Next(1, 5);

@@ -48,7 +48,7 @@
               "RelativeDocumentMoniker": "TowerOfDreamsText\\Enemy.cs",
               "ToolTip": "C:\\Users\\aparrotto\\OneDrive - FreedomPay, Inc\\Documents\\GitHub\\TowerOfDreamsText\\TowerOfDreamsText\\TowerOfDreamsText\\Enemy.cs",
               "RelativeToolTip": "TowerOfDreamsText\\Enemy.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAAwwDYAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAACIAAAAAAAAAAAAmwCoAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-01T19:52:11.393Z",
               "EditorCaption": ""
@@ -63,8 +63,7 @@
               "RelativeToolTip": "TowerOfDreamsText\\Player.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAgwBAAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-01T19:51:15.6Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-01T19:51:15.6Z"
             },
             {
               "$type": "Document",
@@ -76,8 +75,7 @@
               "RelativeToolTip": "TowerOfDreamsText\\MainLoop.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAAAAG4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T14:55:55.903Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-30T14:55:55.903Z"
             }
           ]
         }
