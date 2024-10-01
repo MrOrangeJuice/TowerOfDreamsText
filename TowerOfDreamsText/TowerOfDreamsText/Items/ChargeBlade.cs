@@ -13,7 +13,7 @@ namespace TowerOfDreamsText.Items
         public ChargeBlade()
         {
             name = "Charge Blade";
-            description = "Every third attack is doubled";
+            description = "Double damage for every third attack";
             price = 50;
         }
 

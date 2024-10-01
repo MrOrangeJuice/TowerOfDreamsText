@@ -8,7 +8,7 @@ int dropChance;
 int jumpFailChance;
 List<Item> items = new List<Item>();
 Player player = new Player();
-List<Item> itemList = new List<Item> {new CritJelly(), new ChargeBlade(), new HeartTrophy()};
+List<Item> itemList = new List<Item> {new CritJelly(), new ChargeBlade(), new HeartTrophy(), new PencilSharpener()};
 
 while(input != "q")
 {
@@ -116,7 +116,7 @@ void Death()
     Console.WriteLine();
     player = new Player();
     enemiesKilled = 0;
-    currentEnemy = new Enemy();
+    items = new List<Item>();
 }
 
 void CheckPassiveItems()
