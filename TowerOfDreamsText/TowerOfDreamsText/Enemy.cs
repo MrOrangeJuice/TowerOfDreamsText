@@ -25,6 +25,17 @@ namespace TowerOfDreamsText
         private int eliteRand;
         private int nameRand;
         private string name;
+        public string Name
+        {
+            get
+            {
+                return name;
+            }
+            set
+            {
+                name = value;
+            }
+        }
         public Enemy(int enemiesKilled = 0) 
         {
             Random rand = new Random();

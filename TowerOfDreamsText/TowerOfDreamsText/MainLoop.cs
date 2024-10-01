@@ -31,18 +31,25 @@ while(input != "q")
             }
             else
             {
+                Console.WriteLine();
                 health -= currentEnemy.Attack();
                 Console.WriteLine("You're now at " + health + " health");
+                // Check for death
+                if (health <= 0) Death();
             }
             break;
         case "j":
-            Console.WriteLine("You jump over the enemy!");
+            Console.WriteLine("You jump over the " + currentEnemy.Name);
+            Console.WriteLine();
             Random jumpRand = new Random();
             jumpFailChance = jumpRand.Next(1, 10);
             if(jumpFailChance < 6)
             {
+                Console.WriteLine(currentEnemy.Name + " takes a swipe at you before you can get away!");
                 health -= currentEnemy.Attack();
                 Console.WriteLine("You're now at " + health + " health");
+                // Check for death
+                if (health <= 0) Death();
             }
             currentEnemy = new Enemy(enemiesKilled);
             break;
@@ -70,4 +77,18 @@ void enemyDrop()
         Console.WriteLine("You're now at " + health + " health!");
         Console.WriteLine();
     }
+}
+
+void Death()
+{
+    Console.WriteLine();
+    Console.WriteLine("You perished!");
+    Console.WriteLine("You killed " + enemiesKilled + " enemies!");
+    Console.WriteLine("Restarting...");
+    Console.WriteLine();
+    health = 6;
+    attack = 2;
+    gems = 0;
+    enemiesKilled = 0;
+    currentEnemy = new Enemy();
 }
