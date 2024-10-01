@@ -8,15 +8,7 @@ int dropChance;
 int jumpFailChance;
 List<Item> items = new List<Item>();
 Player player = new Player();
-items.Add(new CritJelly());
-items.Add(new CritJelly());
-items.Add(new CritJelly());
-items.Add(new ChargeBlade());
-items.Add(new ChargeBlade());
-items.Add(new ChargeBlade());
-items.Add(new HeartTrophy());
-items.Add(new HeartTrophy());
-items.Add(new HeartTrophy());
+List<Item> itemList = new List<Item> {new CritJelly(), new ChargeBlade(), new HeartTrophy()};
 
 while(input != "q")
 {
@@ -99,11 +91,18 @@ void enemyDrop()
     player.Gems += dropChance;
     Console.WriteLine("You now have " + player.Gems + " gems!");
     Console.WriteLine();
-    if(dropChance < 11)
+    if(dropChance < player.ThisHeartChance)
     {
         Console.WriteLine("You got a heart!");
         player.Health += 2;
         Console.WriteLine("You're now at " + player.Health + " health!");
+        Console.WriteLine();
+    }
+    if(dropChance < 11)
+    {
+        Item newItem = itemList[dropRand.Next(1, itemList.Count)];
+        items.Add(newItem);
+        Console.WriteLine("You found a " + newItem.Name + "!");
         Console.WriteLine();
     }
 }
