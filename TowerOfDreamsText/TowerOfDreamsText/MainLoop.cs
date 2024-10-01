@@ -1,19 +1,35 @@
 ﻿using TowerOfDreamsText;
+using TowerOfDreamsText.Items;
 
 string input = "";
-int health = 6;
-int attack = 2;
-int gems = 0;
 Enemy currentEnemy = new Enemy();
 int enemiesKilled = 0;
 int dropChance;
 int jumpFailChance;
+List<Item> items = new List<Item>();
+Player player = new Player();
+items.Add(new CritJelly());
+items.Add(new CritJelly());
+items.Add(new CritJelly());
+items.Add(new ChargeBlade());
+items.Add(new ChargeBlade());
+items.Add(new ChargeBlade());
+items.Add(new HeartTrophy());
+items.Add(new HeartTrophy());
+items.Add(new HeartTrophy());
 
 while(input != "q")
 {
+    // Setup temp variables
+    player.ThisAttack = player.Attack;
+    player.ThisCritChance = player.CritChance;
+    player.ThisHeartChance = player.HeartChance;
+    CheckPassiveItems();
+
     Console.WriteLine("What would you like to do?");
     Console.WriteLine("a: Attack");
     Console.WriteLine("j: Jump");
+    Console.WriteLine("p: See Passive Items");
     Console.WriteLine("s: See Stats");
     Console.WriteLine("q: Quit");
     input = Console.ReadLine();
@@ -21,8 +37,15 @@ while(input != "q")
     switch(input)
     {
         case "a":
+            player.NumAttacks++;
             Console.WriteLine("You attack!");
-            currentEnemy.TakeDamage(attack);
+            Random critRand = new Random();
+            if(critRand.Next(1,20) <= player.ThisCritChance)
+            {
+                Console.WriteLine("CRITICAL HIT!");
+                player.ThisAttack *= 2;
+            }
+            currentEnemy.TakeDamage(player.ThisAttack);
             if (currentEnemy.Die())
             {
                 enemyDrop();
@@ -32,10 +55,10 @@ while(input != "q")
             else
             {
                 Console.WriteLine();
-                health -= currentEnemy.Attack();
-                Console.WriteLine("You're now at " + health + " health");
+                player.Health -= currentEnemy.Attack();
+                Console.WriteLine("You're now at " + player.Health + " health");
                 // Check for death
-                if (health <= 0) Death();
+                if (player.Health <= 0) Death();
             }
             break;
         case "j":
@@ -46,16 +69,22 @@ while(input != "q")
             if(jumpFailChance < 6)
             {
                 Console.WriteLine(currentEnemy.Name + " takes a swipe at you before you can get away!");
-                health -= currentEnemy.Attack();
-                Console.WriteLine("You're now at " + health + " health");
+                player.Health -= currentEnemy.Attack();
+                Console.WriteLine("You're now at " + player.Health + " health");
                 // Check for death
-                if (health <= 0) Death();
+                if (player.Health <= 0) Death();
             }
             currentEnemy = new Enemy(enemiesKilled);
             break;
+        case "p":
+            foreach(PassiveItem item in items)
+            {
+                item.PrintItem();
+            }
+            break;
         case "s":
-            Console.WriteLine("You're at " + health + " health");
-            Console.WriteLine("You have " + gems + " gems");
+            Console.WriteLine("You're at " + player.Health + " health");
+            Console.WriteLine("You have " + player.Gems + " gems");
             break;
     }
     Console.WriteLine();
@@ -67,14 +96,14 @@ void enemyDrop()
     dropChance = dropRand.Next(1, 20);
 
     Console.WriteLine("You found " + dropChance + " gems!");
-    gems += dropChance;
-    Console.WriteLine("You now have " + gems + " gems!");
+    player.Gems += dropChance;
+    Console.WriteLine("You now have " + player.Gems + " gems!");
     Console.WriteLine();
     if(dropChance < 11)
     {
         Console.WriteLine("You got a heart!");
-        health += 2;
-        Console.WriteLine("You're now at " + health + " health!");
+        player.Health += 2;
+        Console.WriteLine("You're now at " + player.Health + " health!");
         Console.WriteLine();
     }
 }
@@ -86,9 +115,15 @@ void Death()
     Console.WriteLine("You killed " + enemiesKilled + " enemies!");
     Console.WriteLine("Restarting...");
     Console.WriteLine();
-    health = 6;
-    attack = 2;
-    gems = 0;
+    player = new Player();
     enemiesKilled = 0;
     currentEnemy = new Enemy();
+}
+
+void CheckPassiveItems()
+{
+    foreach (PassiveItem item in items)
+    {
+        item.PassiveEffect(player);
+    }
 }
