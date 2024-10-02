@@ -46,6 +46,7 @@ namespace TowerOfDreamsText
                 Console.WriteLine("Items for sale:");
                 Console.WriteLine();
                 PrintItems();
+                Console.WriteLine("Item Number: Buy Item");
                 Console.WriteLine("t: Talk to Stamper");
                 Console.WriteLine("l: Leave");
                 Console.WriteLine("What would you like to do?");
