@@ -30,10 +30,12 @@ while(input != "q")
     switch(input)
     {
         case "a":
+            Random attackRand = new Random();
             player.NumAttacks++;
+            // Add attack range to attack
+            player.ThisAttack += attackRand.Next(0, player.AttackRange);
             Console.WriteLine("You attack!");
-            Random critRand = new Random();
-            if(critRand.Next(1,20) <= player.ThisCritChance)
+            if(attackRand.Next(1,20) <= player.ThisCritChance)
             {
                 Console.WriteLine("CRITICAL HIT!");
                 player.ThisAttack *= 2;
@@ -76,8 +78,9 @@ while(input != "q")
             }
             break;
         case "s":
-            Console.WriteLine("You're at " + player.Health + " health");
+            Console.WriteLine("You're at " + player.Health + "/" + player.MaxHealth + " health");
             Console.WriteLine("You have " + player.Gems + " gems");
+            Console.WriteLine("You deal " + player.Attack + "-" + (player.Attack + player.AttackRange) + " damage");
             break;
     }
     Console.WriteLine();
@@ -96,7 +99,8 @@ void enemyDrop()
     {
         Console.WriteLine("You got a heart!");
         player.Health += 2;
-        Console.WriteLine("You're now at " + player.Health + " health!");
+        if(player.Health > player.MaxHealth) player.Health = player.MaxHealth;
+        Console.WriteLine("You're now at " + player.Health + "/" + player.MaxHealth + " health!");
         Console.WriteLine();
     }
     if(dropChance < 11)

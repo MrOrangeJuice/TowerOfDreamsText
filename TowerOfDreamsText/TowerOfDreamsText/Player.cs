@@ -10,8 +10,12 @@ namespace TowerOfDreamsText
     {
         private int health;
         public int Health { get { return health; } set { health = value; } }
+        private int maxHealth;
+        public int MaxHealth { get { return maxHealth; } set { maxHealth = value; } }
         private int attack;
         public int Attack { get { return attack; } set { attack = value; } }
+        private int attackRange;
+        public int AttackRange { get { return attackRange; } set { attackRange = value; } }
         private int thisAttack;
         public int ThisAttack { get { return thisAttack; } set { thisAttack = value; } }
         private int numAttacks;
@@ -31,10 +35,12 @@ namespace TowerOfDreamsText
         private int thisJumpChance;
         public int ThisJumpChance { get { return thisJumpChance; } set { thisJumpChance = value;  } }
 
-        public Player(int health = 8, int attack = 3, int gems = 0, int critChance = 2, int heartChance = 5, int jumpChance = 10)
+        public Player(int health = 8, int maxHealth = 8, int attack = 2, int attackRange = 2, int gems = 0, int critChance = 2, int heartChance = 5, int jumpChance = 10)
         {
             this.health = health;
+            this.maxHealth = maxHealth;
             this.attack = attack;
+            this.attackRange = attackRange;
             this.gems = gems;
             this.critChance = critChance;
             this.heartChance = heartChance;

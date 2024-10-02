@@ -11,16 +11,16 @@
       "RelativeMoniker": "D:0:0:{DA1787A3-96E1-48B0-A393-D05051DEE8C5}|TowerOfDreamsText\\TowerOfDreamsText.csproj|solutionrelative:towerofdreamstext\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{DA1787A3-96E1-48B0-A393-D05051DEE8C5}|TowerOfDreamsText\\TowerOfDreamsText.csproj|c:\\users\\aparrotto\\onedrive - freedompay, inc\\documents\\github\\towerofdreamstext\\towerofdreamstext\\towerofdreamstext\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA1787A3-96E1-48B0-A393-D05051DEE8C5}|TowerOfDreamsText\\TowerOfDreamsText.csproj|solutionrelative:towerofdreamstext\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{DA1787A3-96E1-48B0-A393-D05051DEE8C5}|TowerOfDreamsText\\TowerOfDreamsText.csproj|c:\\users\\aparrotto\\onedrive - freedompay, inc\\documents\\github\\towerofdreamstext\\towerofdreamstext\\towerofdreamstext\\items\\bagofwinds.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DA1787A3-96E1-48B0-A393-D05051DEE8C5}|TowerOfDreamsText\\TowerOfDreamsText.csproj|solutionrelative:towerofdreamstext\\items\\bagofwinds.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DA1787A3-96E1-48B0-A393-D05051DEE8C5}|TowerOfDreamsText\\TowerOfDreamsText.csproj|c:\\users\\aparrotto\\onedrive - freedompay, inc\\documents\\github\\towerofdreamstext\\towerofdreamstext\\towerofdreamstext\\items\\chargeblade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DA1787A3-96E1-48B0-A393-D05051DEE8C5}|TowerOfDreamsText\\TowerOfDreamsText.csproj|solutionrelative:towerofdreamstext\\items\\chargeblade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DA1787A3-96E1-48B0-A393-D05051DEE8C5}|TowerOfDreamsText\\TowerOfDreamsText.csproj|c:\\users\\aparrotto\\onedrive - freedompay, inc\\documents\\github\\towerofdreamstext\\towerofdreamstext\\towerofdreamstext\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA1787A3-96E1-48B0-A393-D05051DEE8C5}|TowerOfDreamsText\\TowerOfDreamsText.csproj|solutionrelative:towerofdreamstext\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,7 +50,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "ChargeBlade.cs",
               "DocumentMoniker": "C:\\Users\\aparrotto\\OneDrive - FreedomPay, Inc\\Documents\\GitHub\\TowerOfDreamsText\\TowerOfDreamsText\\TowerOfDreamsText\\Items\\ChargeBlade.cs",
               "RelativeDocumentMoniker": "TowerOfDreamsText\\Items\\ChargeBlade.cs",
@@ -58,12 +58,11 @@
               "RelativeToolTip": "TowerOfDreamsText\\Items\\ChargeBlade.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-02T13:35:00.296Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-02T13:35:00.296Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "BagOfWinds.cs",
               "DocumentMoniker": "C:\\Users\\aparrotto\\OneDrive - FreedomPay, Inc\\Documents\\GitHub\\TowerOfDreamsText\\TowerOfDreamsText\\TowerOfDreamsText\\Items\\BagOfWinds.cs",
               "RelativeDocumentMoniker": "TowerOfDreamsText\\Items\\BagOfWinds.cs",
@@ -71,18 +70,17 @@
               "RelativeToolTip": "TowerOfDreamsText\\Items\\BagOfWinds.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-02T13:34:57.015Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-02T13:34:57.015Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "Enemy.cs",
               "DocumentMoniker": "C:\\Users\\aparrotto\\OneDrive - FreedomPay, Inc\\Documents\\GitHub\\TowerOfDreamsText\\TowerOfDreamsText\\TowerOfDreamsText\\Enemy.cs",
               "RelativeDocumentMoniker": "TowerOfDreamsText\\Enemy.cs",
               "ToolTip": "C:\\Users\\aparrotto\\OneDrive - FreedomPay, Inc\\Documents\\GitHub\\TowerOfDreamsText\\TowerOfDreamsText\\TowerOfDreamsText\\Enemy.cs",
               "RelativeToolTip": "TowerOfDreamsText\\Enemy.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB8AAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAF8AAAAAAAAAAAAIwHYAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-01T19:52:11.393Z",
               "EditorCaption": ""
@@ -95,7 +93,7 @@
               "RelativeDocumentMoniker": "TowerOfDreamsText\\Player.cs",
               "ToolTip": "C:\\Users\\aparrotto\\OneDrive - FreedomPay, Inc\\Documents\\GitHub\\TowerOfDreamsText\\TowerOfDreamsText\\TowerOfDreamsText\\Player.cs",
               "RelativeToolTip": "TowerOfDreamsText\\Player.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAmwCgAAAApAAAAAAAAAA==",
+              "ViewState": "AgIAACUAAAAAAAAAAAAUwCgAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-01T19:51:15.6Z",
               "EditorCaption": ""
@@ -108,7 +106,7 @@
               "RelativeDocumentMoniker": "TowerOfDreamsText\\MainLoop.cs",
               "ToolTip": "C:\\Users\\aparrotto\\OneDrive - FreedomPay, Inc\\Documents\\GitHub\\TowerOfDreamsText\\TowerOfDreamsText\\TowerOfDreamsText\\MainLoop.cs",
               "RelativeToolTip": "TowerOfDreamsText\\MainLoop.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAowD0AAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-30T14:55:55.903Z",
               "EditorCaption": ""

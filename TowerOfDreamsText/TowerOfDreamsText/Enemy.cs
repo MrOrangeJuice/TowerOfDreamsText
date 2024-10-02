@@ -116,6 +116,7 @@ namespace TowerOfDreamsText
             // Print details on enemy creation
             Console.WriteLine("You encounter a " + name + "!");
             Console.WriteLine(name + " has " + health + " health");
+            Console.WriteLine(name + " has " + damage + " attack");
             Console.WriteLine();
         }
 
