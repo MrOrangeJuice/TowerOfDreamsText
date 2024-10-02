@@ -8,7 +8,7 @@ int dropChance;
 int jumpFailChance;
 List<Item> items = new List<Item>();
 Player player = new Player();
-List<Item> itemList = new List<Item> {new CritJelly(), new ChargeBlade(), new HeartTrophy(), new PencilSharpener()};
+List<Item> itemList = new List<Item> {new CritJelly(), new ChargeBlade(), new HeartTrophy(), new PencilSharpener(), new BagOfWinds()};
 
 while(input != "q")
 {
@@ -16,6 +16,7 @@ while(input != "q")
     player.ThisAttack = player.Attack;
     player.ThisCritChance = player.CritChance;
     player.ThisHeartChance = player.HeartChance;
+    player.ThisJumpChance = player.JumpChance;
     CheckPassiveItems();
 
     Console.WriteLine("What would you like to do?");
@@ -57,8 +58,8 @@ while(input != "q")
             Console.WriteLine("You jump over the " + currentEnemy.Name);
             Console.WriteLine();
             Random jumpRand = new Random();
-            jumpFailChance = jumpRand.Next(1, 10);
-            if(jumpFailChance < 6)
+            jumpFailChance = jumpRand.Next(1, 20);
+            if(jumpFailChance >= player.ThisJumpChance)
             {
                 Console.WriteLine(currentEnemy.Name + " takes a swipe at you before you can get away!");
                 player.Health -= currentEnemy.Attack();
@@ -88,7 +89,7 @@ void enemyDrop()
     dropChance = dropRand.Next(1, 20);
 
     Console.WriteLine("You found " + dropChance + " gems!");
-    player.Gems += dropChance;
+    player.Gems += (dropChance + (currentEnemy.Damage * 2));
     Console.WriteLine("You now have " + player.Gems + " gems!");
     Console.WriteLine();
     if(dropChance < player.ThisHeartChance)

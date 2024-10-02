@@ -26,18 +26,24 @@ namespace TowerOfDreamsText
         public int HeartChance { get { return heartChance; } set { heartChance = value; } }
         private int thisHeartChance;
         public int ThisHeartChance { get { return thisHeartChance; } set { thisHeartChance = value; } }
+        private int jumpChance;
+        public int JumpChance { get { return jumpChance; } set { jumpChance = value; } }
+        private int thisJumpChance;
+        public int ThisJumpChance { get { return thisJumpChance; } set { thisJumpChance = value;  } }
 
-        public Player(int health = 6, int attack = 2, int gems = 0, int critChance = 2, int heartChance = 5)
+        public Player(int health = 8, int attack = 3, int gems = 0, int critChance = 2, int heartChance = 5, int jumpChance = 10)
         {
             this.health = health;
             this.attack = attack;
             this.gems = gems;
             this.critChance = critChance;
             this.heartChance = heartChance;
+            this.jumpChance = jumpChance;
             thisAttack = 0;
             thisCritChance = 0;
             thisHeartChance = 0;
             numAttacks = 0;
+            thisJumpChance = 0;
         }
     }
 }

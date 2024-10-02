@@ -21,6 +21,17 @@ namespace TowerOfDreamsText
             }
         }
         private int damage;
+        public int Damage
+        {
+            get
+            {
+                return damage;
+            }
+            set
+            {
+                damage = value;
+            }
+        }
         private bool elite;
         private int eliteRand;
         private int nameRand;
@@ -39,39 +50,57 @@ namespace TowerOfDreamsText
         public Enemy(int enemiesKilled = 0) 
         {
             Random rand = new Random();
-            health = rand.Next(2, 4+enemiesKilled);
-            damage = rand.Next(1, 2+enemiesKilled);
             nameRand = rand.Next(1, 11);
             switch(nameRand)
             {
                 case 1:
                     name = "Slimo";
+                    health = rand.Next(2, 4 + enemiesKilled);
+                    damage = rand.Next(1, 2 + enemiesKilled);
                     break;
                 case 2:
                     name = "Cannon Gizmo";
+                    health = rand.Next(3, 5 + enemiesKilled);
+                    damage = rand.Next(1, 2 + enemiesKilled);
                     break;
                 case 3:
                     name = "Gravitra";
+                    health = rand.Next(2, 4 + enemiesKilled);
+                    damage = rand.Next(2, 3 + enemiesKilled);
                     break;
                 case 4:
                     name = "Barrollo";
+                    health = rand.Next(1, 3 + enemiesKilled);
+                    damage = rand.Next(3, 5 + enemiesKilled);
                     break;
                 case 5:
                     name = "Tank Gizmo";
+                    health = rand.Next(3, 5 + enemiesKilled);
+                    damage = rand.Next(3, 5 + enemiesKilled);
                     break;
                 case 6:
                     name = "Wrenchonimo";
+                    health = rand.Next(2, 4 + enemiesKilled);
+                    damage = rand.Next(3, 5 + enemiesKilled);
                     break;
                 case 7:
                     name = "Sawblade";
+                    health = rand.Next(2, 4 + enemiesKilled);
+                    damage = rand.Next(4, 6 + enemiesKilled);
                     break;
                 case 8:
                     name = "Beezle";
+                    health = rand.Next(5, 8 + enemiesKilled);
+                    damage = rand.Next(1, 2 + enemiesKilled);
                     break;
                 case 9:
                     name = "Spice Plant";
+                    health = rand.Next(2, 4 + enemiesKilled);
+                    damage = rand.Next(2, 6 + enemiesKilled);
                     break;
                 case 10:
+                    health = rand.Next(1, 3 + enemiesKilled);
+                    damage = rand.Next(3, 7 + enemiesKilled);
                     name = "Cumulonimbo";
                     break;
             }
