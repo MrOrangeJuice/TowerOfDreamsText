@@ -34,8 +34,14 @@ namespace TowerOfDreamsText
         public int JumpChance { get { return jumpChance; } set { jumpChance = value; } }
         private int thisJumpChance;
         public int ThisJumpChance { get { return thisJumpChance; } set { thisJumpChance = value;  } }
+        private List<Item> items = new List<Item>();
+        public List<Item> Items { get { return items; } set { items = value; } }
+        private int shopChance;
+        public int ShopChance { get { return shopChance; } set { shopChance = value; } }
+        private int thisShopChance;
+        public int ThisShopChance { get { return thisShopChance; } set { thisShopChance = value; } }
 
-        public Player(int health = 8, int maxHealth = 8, int attack = 2, int attackRange = 2, int gems = 0, int critChance = 2, int heartChance = 5, int jumpChance = 10)
+        public Player(int health = 8, int maxHealth = 8, int attack = 2, int attackRange = 2, int gems = 100, int critChance = 2, int heartChance = 5, int jumpChance = 10, int shopChance = 5)
         {
             this.health = health;
             this.maxHealth = maxHealth;
@@ -45,11 +51,13 @@ namespace TowerOfDreamsText
             this.critChance = critChance;
             this.heartChance = heartChance;
             this.jumpChance = jumpChance;
+            this.shopChance = shopChance;
             thisAttack = 0;
             thisCritChance = 0;
             thisHeartChance = 0;
             numAttacks = 0;
             thisJumpChance = 0;
+            thisShopChance = 0;
         }
     }
 }

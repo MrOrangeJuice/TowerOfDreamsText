@@ -6,7 +6,6 @@ Enemy currentEnemy = new Enemy();
 int enemiesKilled = 0;
 int dropChance;
 int jumpFailChance;
-List<Item> items = new List<Item>();
 Player player = new Player();
 List<Item> itemList = new List<Item> {new CritJelly(), new ChargeBlade(), new HeartTrophy(), new PencilSharpener(), new BagOfWinds()};
 
@@ -17,6 +16,7 @@ while(input != "q")
     player.ThisCritChance = player.CritChance;
     player.ThisHeartChance = player.HeartChance;
     player.ThisJumpChance = player.JumpChance;
+    player.ThisShopChance = player.ShopChance;
     CheckPassiveItems();
 
     Console.WriteLine("What would you like to do?");
@@ -44,6 +44,7 @@ while(input != "q")
             if (currentEnemy.Die())
             {
                 enemyDrop();
+                CheckForShop();
                 enemiesKilled++;
                 currentEnemy = new Enemy(enemiesKilled);
             }
@@ -69,10 +70,11 @@ while(input != "q")
                 // Check for death
                 if (player.Health <= 0) Death();
             }
+            CheckForShop();
             currentEnemy = new Enemy(enemiesKilled);
             break;
         case "p":
-            foreach(PassiveItem item in items)
+            foreach(Item item in player.Items)
             {
                 item.PrintItem();
             }
@@ -106,7 +108,7 @@ void enemyDrop()
     if(dropChance < 11)
     {
         Item newItem = itemList[dropRand.Next(1, itemList.Count)];
-        items.Add(newItem);
+        player.Items.Add(newItem);
         Console.WriteLine("You found a " + newItem.Name + "!");
         Console.WriteLine();
     }
@@ -121,13 +123,21 @@ void Death()
     Console.WriteLine();
     player = new Player();
     enemiesKilled = 0;
-    items = new List<Item>();
 }
 
 void CheckPassiveItems()
 {
-    foreach (PassiveItem item in items)
+    foreach (PassiveItem item in player.Items)
     {
         item.PassiveEffect(player);
+    }
+}
+
+void CheckForShop()
+{
+    Random shopRand = new Random();
+    if(shopRand.Next(1,20) < player.ThisShopChance)
+    {
+        Shop shop = new Shop(itemList, player);
     }
 }

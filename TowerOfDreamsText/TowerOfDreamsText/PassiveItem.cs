@@ -10,10 +10,11 @@ namespace TowerOfDreamsText
     {
         public abstract void PassiveEffect(Player player);
 
-        public void PrintItem()
+        public override void PrintItem(bool printPrice = false)
         {
             Console.WriteLine(name);
             Console.WriteLine(description);
+            if (printPrice) Console.WriteLine("Price: " + price);
             Console.WriteLine();
         }
     }

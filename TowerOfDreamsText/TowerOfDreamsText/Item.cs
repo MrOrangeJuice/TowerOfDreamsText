@@ -15,5 +15,7 @@ namespace TowerOfDreamsText
         protected int price;
         public int Price { get { return price; } }
         protected bool active;
+
+        public abstract void PrintItem(bool printPrice = false);
     }
 }
