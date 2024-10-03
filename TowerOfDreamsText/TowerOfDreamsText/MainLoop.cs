@@ -17,6 +17,7 @@ while(input != "q")
     player.ThisHeartChance = player.HeartChance;
     player.ThisJumpChance = player.JumpChance;
     player.ThisShopChance = player.ShopChance;
+    player.ThisMaxHealth = player.MaxHealth;
     CheckPassiveItems();
 
     Console.WriteLine("What would you like to do?");
@@ -80,9 +81,9 @@ while(input != "q")
             }
             break;
         case "s":
-            Console.WriteLine("You're at " + player.Health + "/" + player.MaxHealth + " health");
+            Console.WriteLine("You're at " + player.Health + "/" + player.ThisMaxHealth + " health");
             Console.WriteLine("You have " + player.Gems + " gems");
-            Console.WriteLine("You deal " + player.Attack + "-" + (player.Attack + player.AttackRange) + " damage");
+            Console.WriteLine("You deal " + player.ThisAttack + "-" + (player.ThisAttack + player.AttackRange) + " damage");
             break;
     }
     Console.WriteLine();
@@ -101,8 +102,14 @@ void enemyDrop()
     {
         Console.WriteLine("You got a heart!");
         player.Health += 2;
-        if(player.Health > player.MaxHealth) player.Health = player.MaxHealth;
-        Console.WriteLine("You're now at " + player.Health + "/" + player.MaxHealth + " health!");
+        if (player.Health > player.ThisMaxHealth)
+        {
+            int overhealGems = 0;
+            overhealGems = (player.Health - player.ThisMaxHealth) * 10;
+            Console.WriteLine("OVERHEAL! " + " +" + overhealGems + " gems!"); 
+            player.Health = player.ThisMaxHealth;
+        }
+        Console.WriteLine("You're now at " + player.Health + "/" + player.ThisMaxHealth + " health!");
         Console.WriteLine();
     }
     if(dropChance < 11)
@@ -123,6 +130,7 @@ void Death()
     Console.WriteLine();
     player = new Player();
     enemiesKilled = 0;
+    currentEnemy = new Enemy();
 }
 
 void CheckPassiveItems()

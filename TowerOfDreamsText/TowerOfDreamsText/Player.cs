@@ -12,6 +12,8 @@ namespace TowerOfDreamsText
         public int Health { get { return health; } set { health = value; } }
         private int maxHealth;
         public int MaxHealth { get { return maxHealth; } set { maxHealth = value; } }
+        private int thisMaxHealth;
+        public int ThisMaxHealth { get { return thisMaxHealth; } set { thisMaxHealth = value; } }
         private int attack;
         public int Attack { get { return attack; } set { attack = value; } }
         private int attackRange;
@@ -26,6 +28,10 @@ namespace TowerOfDreamsText
         public int CritChance { get { return critChance; } set { critChance = value; } }
         private int thisCritChance;
         public int ThisCritChance { get { return thisCritChance; } set { thisCritChance = value; } }
+        private int critHealChance;
+        public int CritHealChance { get { return critHealChance; } set { critHealChance = value; } }
+        private int thisCritHealChance;
+        public int ThisCritHealChance { get { return thisCritHealChance; } set { thisCritHealChance = value; } }
         private int heartChance;
         public int HeartChance { get { return heartChance; } set { heartChance = value; } }
         private int thisHeartChance;
@@ -41,7 +47,7 @@ namespace TowerOfDreamsText
         private int thisShopChance;
         public int ThisShopChance { get { return thisShopChance; } set { thisShopChance = value; } }
 
-        public Player(int health = 8, int maxHealth = 8, int attack = 2, int attackRange = 2, int gems = 100, int critChance = 2, int heartChance = 5, int jumpChance = 10, int shopChance = 5)
+        public Player(int health = 8, int maxHealth = 8, int attack = 2, int attackRange = 2, int gems = 0, int critChance = 2, int heartChance = 5, int jumpChance = 10, int shopChance = 5, int critHealChance = 0)
         {
             this.health = health;
             this.maxHealth = maxHealth;
@@ -52,9 +58,12 @@ namespace TowerOfDreamsText
             this.heartChance = heartChance;
             this.jumpChance = jumpChance;
             this.shopChance = shopChance;
+            this.critHealChance = critHealChance;
             thisAttack = 0;
             thisCritChance = 0;
             thisHeartChance = 0;
+            thisMaxHealth = 0;
+            thisCritHealChance = 0;
             numAttacks = 0;
             thisJumpChance = 0;
             thisShopChance = 0;
