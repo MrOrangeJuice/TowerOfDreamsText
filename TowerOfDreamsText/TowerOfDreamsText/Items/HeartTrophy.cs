@@ -12,7 +12,7 @@ namespace TowerOfDreamsText.Items
         {
             name = "Heart Trophy";
             description = "25% more likely for enemies to drop hearts";
-            price = 60;
+            price = 40;
         }
 
         public override void PassiveEffect(Player player)

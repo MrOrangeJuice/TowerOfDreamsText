@@ -7,13 +7,14 @@ int enemiesKilled = 0;
 int dropChance;
 int jumpFailChance;
 Player player = new Player();
-List<Item> itemList = new List<Item> {new CritJelly(), new ChargeBlade(), new HeartTrophy(), new PencilSharpener(), new BagOfWinds()};
+List<Item> itemList = new List<Item> {new CritJelly(), new ChargeBlade(), new HeartTrophy(), new PencilSharpener(), new BagOfWinds(), new GoldenHeart(), new CritPeanutButter()};
 
 while(input != "q")
 {
     // Setup temp variables
     player.ThisAttack = player.Attack;
     player.ThisCritChance = player.CritChance;
+    player.ThisCritHealChance = player.CritHealChance;
     player.ThisHeartChance = player.HeartChance;
     player.ThisJumpChance = player.JumpChance;
     player.ThisShopChance = player.ShopChance;
@@ -39,6 +40,13 @@ while(input != "q")
             if(attackRand.Next(1,20) <= player.ThisCritChance)
             {
                 Console.WriteLine("CRITICAL HIT!");
+                // Check for heals
+                if (player.ThisCritHealChance >= 1)
+                {
+                    Console.WriteLine("+" + player.ThisCritHealChance + " health from Crit Peanut Butter!");
+                    player.Health += player.ThisCritHealChance;
+                    if (player.Health > player.MaxHealth) Overheal();
+                }
                 player.ThisAttack *= 2;
             }
             currentEnemy.TakeDamage(player.ThisAttack);
@@ -104,10 +112,7 @@ void enemyDrop()
         player.Health += 2;
         if (player.Health > player.ThisMaxHealth)
         {
-            int overhealGems = 0;
-            overhealGems = (player.Health - player.ThisMaxHealth) * 10;
-            Console.WriteLine("OVERHEAL! " + " +" + overhealGems + " gems!"); 
-            player.Health = player.ThisMaxHealth;
+            Overheal();
         }
         Console.WriteLine("You're now at " + player.Health + "/" + player.ThisMaxHealth + " health!");
         Console.WriteLine();
@@ -148,4 +153,13 @@ void CheckForShop()
     {
         Shop shop = new Shop(itemList, player);
     }
+}
+
+int Overheal()
+{
+    int overhealGems = 0;
+    overhealGems = (player.Health - player.ThisMaxHealth) * 10;
+    Console.WriteLine("OVERHEAL! " + " +" + overhealGems + " gems!");
+    player.Health = player.ThisMaxHealth;
+    return overhealGems;
 }

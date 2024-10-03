@@ -12,7 +12,7 @@ namespace TowerOfDreamsText.Items
         {
             name = "Pencil Sharpener";
             description = "+1 attack damage";
-            price = 50;
+            price = 30;
         }
 
         public override void PassiveEffect(Player player)

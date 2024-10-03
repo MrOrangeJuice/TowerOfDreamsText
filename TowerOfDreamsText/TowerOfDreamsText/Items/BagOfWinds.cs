@@ -14,7 +14,7 @@ namespace TowerOfDreamsText.Items
         {
             name = "Bag of Winds";
             description = "25% better chance to jump over enemies";
-            price = 50;
+            price = 30;
         }
 
         public override void PassiveEffect(Player player)

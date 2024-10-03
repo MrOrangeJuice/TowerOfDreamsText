@@ -12,12 +12,12 @@ namespace TowerOfDreamsText.Items
         {
             name = "Crit Peanut Butter";
             description = "Heal by 1 when landing a crit";
-            price = 40;
+            price = 20;
         }
 
         public override void PassiveEffect(Player player)
         {
-            
+            player.ThisCritHealChance += 1;
         }
 
     }

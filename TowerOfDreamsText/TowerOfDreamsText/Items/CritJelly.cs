@@ -12,7 +12,7 @@ namespace TowerOfDreamsText.Items
         {
             name = "Crit Jelly";
             description = "Crit chance up by 25%";
-            price = 40;
+            price = 20;
         }
 
         public override void PassiveEffect(Player player)

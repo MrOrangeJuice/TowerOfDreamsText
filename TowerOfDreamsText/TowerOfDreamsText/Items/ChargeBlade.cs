@@ -14,7 +14,7 @@ namespace TowerOfDreamsText.Items
         {
             name = "Charge Blade";
             description = "Double damage for every third attack";
-            price = 50;
+            price = 30;
         }
 
         public override void PassiveEffect(Player player)

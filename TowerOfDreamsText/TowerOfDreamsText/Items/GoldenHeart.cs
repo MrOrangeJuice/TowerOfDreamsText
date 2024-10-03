@@ -12,7 +12,7 @@ namespace TowerOfDreamsText.Items
         {
             name = "Golden Heart";
             description = "+2 Max Health";
-            price = 50;
+            price = 30;
         }
 
         public override void PassiveEffect(Player player)

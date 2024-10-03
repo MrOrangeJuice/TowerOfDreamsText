@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TowerOfDreamsText.Items;
 
 namespace TowerOfDreamsText
 {
@@ -67,6 +68,7 @@ namespace TowerOfDreamsText
             numAttacks = 0;
             thisJumpChance = 0;
             thisShopChance = 0;
+            //items = new List<Item>{ new CritPeanutButter(), new CritJelly(), new HeartTrophy()};
         }
     }
 }
